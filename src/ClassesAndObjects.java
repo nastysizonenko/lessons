@@ -28,7 +28,6 @@ class Person{
 
     int calculateYearsYoRetirement(){
         int yers = 65-age;
-       // System.out.println("Количество лет до пенсии: "+yers);
         return yers;//также и выход из метода и возращает значение
     }
     void speak(){//методы

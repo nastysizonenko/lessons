@@ -1,15 +1,19 @@
 public class ClassesAndObjects {
     public static void main(String[] args){
     Person person1 = new Person();
-    person1.name = "Boba";
+    person1.setNameAndName("Gary",20);
+    String s1 = "Name";
+
+   // person1.name = "Boba";
     person1.age = 50;
-    //person1.speak();
+    person1.speak();
     //person1.sayBue();
        // System.out.println("My name "+person1.name+" age: "+person1.age);
     Person person2 = new Person();
-    person2.name ="Tolla";
+    person2.setNameAndName(s1,45);
+  //  person2.name ="Tolla";
     person2.age = 23;
-    //person2.speak();//вызов метода
+    person2.speak();//вызов метода
   //  person2.sayBue();
     int year1= person1.calculateYearsYoRetirement();
     int year2= person2.calculateYearsYoRetirement();
@@ -26,9 +30,14 @@ class Person{
     String name;
     int age;
 
+    void setNameAndName(String  username, int userage){
+        name = username;
+        age = userage;
+    }
+
     int calculateYearsYoRetirement(){
-        int yers = 65-age;
-        return yers;//также и выход из метода и возращает значение
+        int year = 65-age;
+        return year;//также и выход из метода и возращает значение
     }
     void speak(){//методы
         for(int i=0;i<3;i++) {
@@ -38,6 +47,7 @@ class Person{
     void sayBue(){//void(пустота) метод ничего не возращает
         System.out.println("Bue!"+" "+name);
     }
+
 
 
 
